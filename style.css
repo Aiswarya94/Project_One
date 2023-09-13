@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --primary: #0f0e76;
+    --secondary: #4942E4;
+    --bgcolor: #c0c8fd;
+    --white: #ffff;
+    --black: #212121;
+    --footerbgcolor: #272727;
+    --text-highlight: #FFC40A;
+}
+
+.screensize {
+    max-width: 120.0rem;
+    padding: 0 0.8rem 0 0.8rem;
+    margin: auto;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 5.6rem;
+}
+
+h2 {
+    font-size: 4.0rem;
+    padding: 1.6rem 0 1.6rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+    padding: 8.0rem 0 2.4rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+/* Navbar */
+.bg-color {
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    font-size: 1.6rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+    padding: 1.6rem 0 1.6rem 0;
+
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1.6rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+}
+
+.nav-logo a {
+    font-size: 2.4rem;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.active {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.menu {
+    font-size: 2.4rem;
+    cursor: pointer;
+    display: none;
+    color: var(--white);
+}
+
+
+/* Herobanner */
+.herobanner-bgcolor {
+    background-color: var(--primary);
+}
+
+.herobanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+.herobanner-content {
+    color: var(--white);
+}
+
+.herobanner-content p {
+    padding-top: 1.6rem;
+}
+
+.hero-color {
+    color: var(--text-highlight);
+    font-size: 5.6rem;
+}
+
+/* Summary of services offered */
+.summary-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-gap: 2.4rem;
+}
+
+.summary-heading {
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--white);
+    border-bottom-right-radius: 1.6rem;
+    box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.3);
+}
+
+.summary-content {
+    background-color: var(--bgcolor);
+    box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.3);
+}
+
+.summary-content p {
+    padding: 1.6rem;
+}
+
+
+/* Recent Project Work */
+.recentproject-container {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.recentproject {
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.recentproject:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
+}
+
+.recentproject-image {
+    padding-bottom: 75%;
+    background-size: cover;
+    background-position: center;
+}
+
+.image1 {
+    background-image: url('https://placehold.co/600x400');
+}
+
+.image2 {
+    background-image: url('https://placehold.co/600x400');
+}
+
+.image3 {
+    background-image: url('https://placehold.co/600x400');
+}
+
+.recentproject-content p {
+    padding: 1.6rem;
+}
+
+.recentproject-content h4 {
+    padding: 1.6rem 0 0 1.6rem;
+}
+
+
+/* Process we follow to deliver */
+.process-container {
+    position: relative;
+}
+
+.process-slide {
+    background-color: var(--secondary);
+    display: none;
+    height: 25.0rem;
+    color: var(--white);
+}
+
+.process-slide.active {
+    display: block;
+}
+
+.process-content {
+    padding-top: 5.6rem;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.process-content p {
+    margin-top: 1.6rem;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    padding: 1.6rem;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 4.0rem;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+/* Training page */
+/* .training {
+    max-width: 120.0rem;
+    margin: auto;
+} */
+
+.training{
+    max-width: 80.0rem;
+    padding: 0 0.8rem 0 0.8rem;
+    margin: auto;
+}
+
+.training-content {
+    padding-top: 3.2rem;
+
+}
+
+.training-content h4 {
+    padding: 2.4rem 0 1.6rem;
+}
+
+.training-content p {
+    padding-top: 1.6rem;
+}
+
+
+/* Services page */
+.ourservices,
+.services {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-content {
+    margin: auto;
+}
+
+.services-content p {
+    padding-bottom: 1.6rem;
+}
+
+
+/* our works */
+.ourworks {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    grid-gap: 2.4rem;
+    /* padding: 0.8rem; */
+    margin-top: 2.4rem;
+    /* background-color: var(--primary); */
+}
+
+.ourworks-image {
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+.ourworks-image img {
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.ourworks-image:hover {
+    transform: rotateY(360deg);
+}
+
+.ourworks-image:nth-child(1) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.ourworks-image:nth-child(4) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+
+/* about */
+.about {
+    display: flex;
+}
+
+.list li {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: justify;
+    padding-top: 1.6rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about-img img {
+    width: 40.0rem;
+}
+
+
+/* contact */
+.contact-bgcolor {
+    background: var(--primary);
+}
+
+.contact-heading {
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-heading p {
+    text-align: center;
+}
+
+
+.cards-container {
+    display: flex;
+    padding-top: 1.6rem;
+    margin-top: 7.0rem;
+    background: var(--bgcolor);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.card {
+    flex-basis: calc(33.33% - 20px);
+    padding: 2.6rem;
+    text-align: center;
+    background: var(--white);
+    margin: 2.4rem;
+    margin-top: -3.2rem;
+}
+
+
+.card .icon {
+    border-radius: 100%;
+    background: var(--white);
+    color: var(--black);
+    width: 5.2rem;
+    height: 5.2rem;
+    margin: auto;
+    margin-top: -4.8rem;
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.2);
+}
+
+.card i {
+    font-size: 1.6rem;
+    margin-top: 1.6rem;
+    color: var(--black);
+}
+
+.icon i {
+    font-size: 2.4rem;
+}
+
+.address {
+    color: var(--white);
+}
+
+.address i {
+    font-size: 3.2rem;
+}
+
+.address p {
+    padding: 3.2rem;
+    text-align: center;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 10.4rem;
+}
+
+.socialmedia {
+    text-align: center;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    font-size: 4.0rem;
+    padding-right: 0.8rem;
+    color: var(--primary);
+}
+
+/* footer */
+
+.footer-end {
+    margin-top: 3.2rem;
+    padding: 8.0rem;
+    background-color: var(--footerbgcolor);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-end-copyright p {
+    text-align: center;
+    color: var(--white);
+}
+
+.footer-end-copyright a {
+    cursor: pointer;
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+@media all and (max-width:780px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav li {
+        display: block;
+        padding: 1.6rem 0;
+    }
+
+    ul {
+        text-align: center;
+        display: none;
+    }
+
+    .nav-logo {
+        align-self: flex-start;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 1.6rem;
+    }
+
+    .showmenu {
+        display: block;
+    }
+
+    /* Herobanner */
+    .herobanner {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    .herobanner-img img {
+        width: 100%;
+    }
+
+
+    /* Summary of services offered */
+    .summary-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services_img img {
+        width: 100%;
+    }
+
+
+    /* Recent Project Work */
+    .recentproject-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Process we follow to deliver */
+    .process-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .process-slide {
+        /* height: 30.0rem; */
+        padding-bottom: 4.0rem;
+    }
+
+    .fivestepslideshow {
+        align-items: flex-start;
+    }
+
+    .prev,
+    .next {
+        top: 50%;
+        margin-top: -2rem;
+        padding: 0.8rem;
+    }
+
+
+    /* Training page */
+
+    /* services page */
+    .ourservices {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* our works */
+    .ourworks {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--quinary);
+    }
+
+    .ourworks-image {
+        margin-top: 2rem;
+    }
+
+    .ourworks-image img {
+        width: 100%;
+        height: max-content;
+    }
+
+
+    /* about */
+    .about {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+
+    /* contact */
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 468px) {
+    .process-slide {
+       height: 35.0rem;
+    }
+}
+
+@media (max-width: 388px) {
+   h1{
+    font-size: 3.2rem;
+   }
+
+   h2{
+    font-size: 2.4rem;
+   }
+
+   h3{
+    font-size: 2.4rem;
+   }
+
+   h4{
+    font-size: 1.6rem;
+   }
+
+   .hero-color{
+    font-size: 3.2rem;
+   }
+
+   .process-slide {
+    height: 40.0rem;
+}
+
+.card p{
+    font-size: 1.2rem;
+}
+}
